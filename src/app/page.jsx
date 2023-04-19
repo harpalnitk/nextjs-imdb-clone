@@ -1,4 +1,4 @@
-const TMDB_API_KEY = process.env.TMDB_API_KEY;
+
 
 import Results from '@/components/Results';
 
@@ -10,16 +10,17 @@ export default async function Home({ searchParams }) {
 
   const URL = `https://api.themoviedb.org/3/${
     genre === 'fetchTrending' ? 'trending/all/week' : 'movie/top_rated'
-  }?api_key=${TMDB_API_KEY}&language=en-US&page=1`;
-  console.log('URL', URL);
-  const res = await fetch(URL, { next: { revalidate: 10000 } });
-  if (!res.ok) {
-    throw new Error('Failed to fetch movie data!');
-  }
-  const data = await res.json();
+  }?api_key=${process.env.TMDB_API_KEY}&language=en-US&page=1`;
+ 
+  // const res = await fetch(URL, { next: { revalidate: 10000 } });
+  // if (!res.ok) {
+  //   throw new Error('Failed to fetch movie data!');
+  // }
+  // const data = await res.json();
 
-  const results = data.results;
-  console.log(results);
+  // const results = data.results;
+  // console.log(results);
+  let results = [];
 
   return (
     <div>
