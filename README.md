@@ -33,3 +33,16 @@ favicon is also added automatically
  https://api.themoviedb.org/3/movie/550?api_key=58104afaca2d72e3702f6839e8f4a49c
 
  ## loading.io website for loading indicators
+
+ ## Image host URL also needs to be added to the next.config.js file
+
+ > npm install -D @tailwindcss/line-clamp
+
+ to limit a paragaraph to only 2 lines in tailwindcss
+
+also, add below code to tailwind.config.js file
+   plugins: [
+    require('@tailwindcss/line-clamp'),
+    // ...
+  ],
+ 

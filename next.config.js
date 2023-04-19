@@ -15,7 +15,17 @@ let nextConfig = {
     NEXTAUTH_URL:'http://localhost:3000',
     NEXTAUTH_SECRET: '276dc05c68e2fbd7d879c1a2cad7382e',
     
-  }
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'image.tmdb.org',
+        port: '',
+        pathname: '/t/p/original/**',
+      },
+    ],
+  },
 }
  
 if(phase === PHASE_DEVELOPMENT_SERVER){
@@ -28,7 +38,17 @@ if(phase === PHASE_DEVELOPMENT_SERVER){
       NEXTAUTH_URL:'http://localhost:3000',
       NEXTAUTH_SECRET: '276dc05c68e2fbd7d879c1a2cad7382e',
       
-    }
+    },
+    images: {
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'image.tmdb.org',
+          port: '',
+          pathname: '/t/p/original/**',
+        },
+      ],
+    },
   }
 }
 
