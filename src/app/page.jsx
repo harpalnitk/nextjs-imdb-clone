@@ -12,15 +12,15 @@ export default async function Home({ searchParams }) {
     genre === 'fetchTrending' ? 'trending/all/week' : 'movie/top_rated'
   }?api_key=${process.env.TMDB_API_KEY}&language=en-US&page=1`;
  
-  // const res = await fetch(URL, { next: { revalidate: 10000 } });
-  // if (!res.ok) {
-  //   throw new Error('Failed to fetch movie data!');
-  // }
-  // const data = await res.json();
+  const res = await fetch(URL, { next: { revalidate: 10000 } });
+  if (!res.ok) {
+    throw new Error('Failed to fetch movie data!');
+  }
+  const data = await res.json();
 
-  // const results = data.results;
-  // console.log(results);
-  let results = [];
+  const results = data.results;
+  //console.log(results);
+
 
   return (
     <div>
