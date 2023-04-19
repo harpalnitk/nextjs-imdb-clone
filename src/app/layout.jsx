@@ -1,6 +1,7 @@
 import Providers from './Providers';
 import './globals.css';
 import Header from '@/components/Header';
+import Navbar from '@/components/Navbar';
 
 // charset and viewport meta tags are added by default 
 //favicon is also added automatically
@@ -15,7 +16,8 @@ export default function RootLayout({ children }) {
     
       <body>
       <Providers>
-        <Header></Header> 
+        <Header/> 
+        <Navbar/>
         {children}
         </Providers>
     </body>

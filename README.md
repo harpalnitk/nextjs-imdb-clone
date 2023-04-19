@@ -27,3 +27,7 @@ favicon is also added automatically
  >npm i next-themes  for  dark/light mode
  # the provider in the above package works only for client side code
  we need to create our own provider to use it for server side code also
+
+
+ ## TMDB API REQUEST
+ https://api.themoviedb.org/3/movie/550?api_key=58104afaca2d72e3702f6839e8f4a49c
